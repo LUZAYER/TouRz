@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo2.png" type="image/x-icon">
+    <title>TouRz@Cox's Bazar</title>
+</head>
+<body onload="loadHTML('header.php', 'header'); loadHTML('footer.html', 'footer'); showOverlayWithSpinner(); loadTourCountdown('cox');">
+  <div class="spinner-box">
+    <div class="spinner">
+      <div></div>   
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+    </div>
+  </div>
+
+  <div id="header"></div>
+  <h1 id="placename">Cox's Bazar</h1>
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
+        <img src="/Images/Cox_s bazar/c1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="/Images/Cox_s bazar/c2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="/Images/Cox_s bazar/c3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+
+      <div class="destinations-container">
+        <div></div>
+        <div>
+          <h1>Destination Details</h1>
+          <h3><span id="place">Cox's Bazar (Bengali: কক্সবাজার)</span> is a city, fishing port, tourism centre, and district headquarters in southeastern Bangladesh. Cox's Bazar Beach, one of the most popular tourist attractions in Bangladesh, is the longest uninterrupted natural beach in the world.[1][2] Located 150 km (93 mi) south of the city of Chittagong, Cox's Bazar is also known by the name <span>'Panowa'</span>, which translates literally as <span>"Yellow Flower"</span>. An old name was <span>"Palongkee"</span></h3>
+          <br><br>
+          <h1>Tour Details</h1>
+          <section id="tour-details">
+            <section>
+              <h6>Starting Point</h6>
+              <h5>Kamalapur Railway Station, Dhaka</h5>
+            </section>
+            <section>
+              <h6>Cost</h6>
+              <h5>5600/- Per Person</h5>
+            </section>
+            <section>
+              <h6>Estimate Travel Duration</h6>
+              <h5>10 Hours</h5>
+            </section>
+            <section>
+              <h6>Tour Duration</h6>
+              <h5>2 Days & 3 Nights</h5>
+            </section>
+            <section>
+              <h6>Transporation</h6>
+              <h5>Train</h5>
+            </section>
+            <section>
+              <h6>Staying At</h6>
+              <h5>Hotel Sea Queen</h5>
+            </section>
+            <section>
+              <h6>Next Tour Leaves In</h6>
+              <h5 id="tour-countdown">Loading...</h5>
+            </section>
+            <section>
+              <h6>Total Bookings</h6>
+              <h5 id="tour-bookings">0</h5>
+            </section>
+            <section>
+              <input type="button" value="Book Now!" id="book" onclick="booknow(); openHtmlFile('info.php');">
+            </section>
+          </section>
+          <marquee behavior="" direction="">N.B: Changes can occur in timing due to unavoidable circumstances</marquee>
+          <br> <br>
+        </div>
+        <div></div>
+      
+      </div>
+
+      
+
+      <div class="map">
+        <div></div>
+        <div>
+          <h6 id="route">Transportation Route</h6>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1884205.234754784!2d89.92663799561933!3d22.724957337840255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3755c7290e783769%3A0x35aac4eca1a26a57!2sKamalapur%20Railway%20Station%2C%20Dacca!3m2!1d23.7311354!2d90.4266328!4m5!1s0x30adc7ea2ab928c3%3A0x3b539e0a68970810!2sCox&#39;s%20Bazar!3m2!1d21.427218399999997!2d92.0061058!5e0!3m2!1sen!2sbd!4v1733927920023!5m2!1sen!2sbd" 
+          width="100%" height="450" 
+          style="border: 2px solid black;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div id="hide">
+          <input id="cost" type="button" value="5600">
+        </div>
+      </div>
+    
+    <div id="footer"></div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

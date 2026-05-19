@@ -1,0 +1,79 @@
+{
+    "cox": {
+        "name": "Cox's Bazar",
+        "slug": "cox",
+        "next_tour": "2026-06-15 08:00",
+        "cost": 5600,
+        "bookings_count": 14
+    },
+    "saintmartin": {
+        "name": "Saint Martins Island",
+        "slug": "saintmartin",
+        "next_tour": "2026-06-23 08:00",
+        "cost": 7200,
+        "bookings_count": 1
+    },
+    "sajek": {
+        "name": "Sajek Valley",
+        "slug": "sajek",
+        "next_tour": "2026-06-10 07:00",
+        "cost": 4600,
+        "bookings_count": 0
+    },
+    "shundarban": {
+        "name": "Sundarbans",
+        "slug": "shundarban",
+        "next_tour": "2026-07-01 06:00",
+        "cost": 12000,
+        "bookings_count": 5
+    },
+    "bandarban": {
+        "name": "Bandarban",
+        "slug": "bandarban",
+        "next_tour": "2026-06-20 07:00",
+        "cost": 4500,
+        "bookings_count": 0
+    },
+    "kuakata": {
+        "name": "Kuakata",
+        "slug": "kuakata",
+        "next_tour": "2026-06-18 08:00",
+        "cost": 4200,
+        "bookings_count": 0
+    },
+    "khagrachari": {
+        "name": "Khagrachari",
+        "slug": "khagrachari",
+        "next_tour": "2026-06-25 07:00",
+        "cost": 3800,
+        "bookings_count": 0
+    },
+    "sreemangal": {
+        "name": "Sreemangal",
+        "slug": "sreemangal",
+        "next_tour": "2026-06-12 06:30",
+        "cost": 5000,
+        "bookings_count": 0
+    },
+    "ladakh": {
+        "name": "Ladakh",
+        "slug": "ladakh",
+        "next_tour": "2026-07-10 05:00",
+        "cost": 21500,
+        "bookings_count": 0
+    },
+    "bali": {
+        "name": "Bali",
+        "slug": "bali",
+        "next_tour": "2026-07-20 06:00",
+        "cost": 19500,
+        "bookings_count": 1
+    },
+    "edinburgh": {
+        "name": "Edinburgh",
+        "slug": "edinburgh",
+        "next_tour": "2026-06-19T12:20",
+        "cost": 75000,
+        "bookings_count": 0
+    }
+}

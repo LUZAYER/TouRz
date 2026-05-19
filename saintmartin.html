@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo2.png" type="image/x-icon">
+    <title>TouRz@Saint-Martins</title>
+</head>
+<body onload="loadHTML('header.php', 'header'); loadHTML('footer.html', 'footer'); showOverlayWithSpinner(); loadTourCountdown('saintmartin');">
+  <div class="spinner-box">
+    <div class="spinner">
+      <div></div>   
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+      <div></div>    
+    </div>
+  </div>
+
+  <div id="header"></div>
+  <h1 id="placename">Saint Martins Island</h1>
+
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
+        <img src="/Images/Saint Martin/s1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="/Images/Saint Martin/s2.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="/Images/Saint Martin/s3.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+
+      <div class="destinations-container">
+        <div></div>
+        <div>
+          <h1>Destination Details</h1>
+          <h3><span id="place">Saint Martins Island (সেন্টমার্টিন দ্বীপ)</span> is a small coral island in the northeastern part of the Bay of Bengal, about 9 km south of the tip of the Cox's Bazar-Teknaf peninsula, and forming the southernmost part of Bangladesh. It has an area of only 3 km2. There is a small adjoining island that is separated at high tide, called Chhera Dwip. It is about 8 kilometres (5 miles) west of the northwest coast of Myanmar, at the mouth of the Naf River. It's the only coral island of Bangladesh. </h3>
+          <br><br>
+          <h1>Tour Details</h1>
+          <section id="tour-details">
+            <section>
+              <h6>Starting Point</h6>
+              <h5>Kamalapur Railway Station, Dhaka</h5>
+            </section>
+            <section>
+              <h6>Cost</h6>
+              <h5>7200/- Per Person</h5>
+            </section>
+            <section>
+              <h6>Estimate Travel Duration</h6>
+              <h5>19 Hours</h5>
+            </section>
+            <section>
+              <h6>Tour Duration</h6>
+              <h5>4 Days & 5 Nights</h5>
+            </section>
+            <section>
+              <h6>Transporation</h6>
+              <h5>Train & Ship</h5>
+            </section>
+            <section>
+              <h6>Staying At</h6>
+              <h5>Coral View Resort</h5>
+            </section>
+            <section>
+              <h6>Next Tour Leaves In</h6>
+              <h5 id="tour-countdown">Loading...</h5>
+            </section>
+            <section>
+              <h6>Total Bookings</h6>
+              <h5 id="tour-bookings">0</h5>
+            </section>
+            <section>
+              <input type="button" value="Book Now!" id="book" onclick="booknow(); openHtmlFile('info.php');">
+            </section>
+          </section>
+          <marquee behavior="" direction="">N.B: Changes can occur in timing due to unavoidable circumstances</marquee>
+          <br> <br>
+        </div>
+        <div></div>
+      
+      </div>
+
+      
+
+      <div class="map">
+        <div></div>
+        <div>
+          <h6 id="route">Transportation Route</h6>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1891708.3432917346!2d90.0778466920949!3d22.173858163615872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x3755c7290e783769%3A0x35aac4eca1a26a57!2sKamalapur%20Railway%20Station%2C%20Dacca!3m2!1d23.7311354!2d90.4266328!4m5!1s0x30ae23666ddf01b1%3A0xfb9c82c83dacf078!2sSaint%20Martins%20Island!3m2!1d20.6237016!2d92.3233948!5e0!3m2!1sen!2sbd!4v1733925189107!5m2!1sen!2sbd" 
+          width="100%" height="450" 
+          style="border: 2px solid black;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div id="hide">
+          <input id="place" type="button" value="Saint Martins Island">
+          <input id="cost" type="button" value="7200">
+        </div>
+      </div>
+    
+    <div id="footer"></div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

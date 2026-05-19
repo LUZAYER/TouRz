@@ -1,0 +1,254 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="tourz_sequence" name="TouRz Tour Booking Flow">
+    <mxGraphModel dx="1488" dy="839" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#005073;" value="TouRz - Sequence Diagram" vertex="1">
+          <mxGeometry height="40" width="800" x="140" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p_customer" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;};fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;" value="Customer" vertex="1">
+          <mxGeometry height="760" width="100" x="20" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p_browser" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;};fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;" value="Browser/UI" vertex="1">
+          <mxGeometry height="760" width="100" x="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_browser_1" parent="p_browser" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="420" width="10" x="45" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p_php" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;};fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;" value="PHP Backend" vertex="1">
+          <mxGeometry height="760" width="100" x="340" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_php_1" parent="p_php" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="45" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="act_php_2" parent="p_php" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="45" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="act_php_3" parent="p_php" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="70" width="10" x="45" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="act_php_4" parent="p_php" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="60" width="10" x="45" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="p_mysql" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;};fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;" value="MySQL Database" vertex="1">
+          <mxGeometry height="760" width="100" x="500" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_mysql_1" parent="p_mysql" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="30" width="10" x="45" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="act_mysql_2" parent="p_mysql" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="70" width="10" x="45" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="act_mysql_3" parent="p_mysql" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="45" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="act_mysql_4" parent="p_mysql" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="45" y="657" as="geometry" />
+        </mxCell>
+        <mxCell id="p_payment" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;};fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;" value="Payment Module" vertex="1">
+          <mxGeometry height="770" width="100" x="660" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="p_qr" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;};fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;" value="QR Generator" vertex="1">
+          <mxGeometry height="780" width="100" x="810" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_qr" parent="p_qr" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="45" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="p_pdf" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;};fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;" value="PDF Generator" vertex="1">
+          <mxGeometry height="780" width="100" x="960" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="act_pdf" parent="p_pdf" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="40" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="b_customer" parent="1" style="html=1;whiteSpace=wrap;fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;align=center;" value="Customer" vertex="1">
+          <mxGeometry height="40" width="100" x="30" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="b_browser" parent="1" style="html=1;whiteSpace=wrap;fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;align=center;" value="Browser/UI" vertex="1">
+          <mxGeometry height="40" width="100" x="170" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="b_php" parent="1" style="html=1;whiteSpace=wrap;fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;align=center;" value="PHP Backend" vertex="1">
+          <mxGeometry height="40" width="100" x="350" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="b_mysql" parent="1" style="html=1;whiteSpace=wrap;fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;align=center;" value="MySQL Database" vertex="1">
+          <mxGeometry height="40" width="100" x="510" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="b_payment" parent="1" style="html=1;whiteSpace=wrap;fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;align=center;" value="Payment Module" vertex="1">
+          <mxGeometry height="40" width="100" x="670" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="b_qr" parent="1" style="html=1;whiteSpace=wrap;fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;align=center;" value="QR Generator" vertex="1">
+          <mxGeometry height="40" width="100" x="820" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="b_pdf" parent="1" style="html=1;whiteSpace=wrap;fillColor=#E1F5FE;strokeColor=#039BE5;fontColor=#000000;align=center;" value="PDF Generator" vertex="1">
+          <mxGeometry height="40" width="100" x="970" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_1" edge="1" parent="1" source="p_customer" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Browse Tours">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="200" as="sourcePoint" />
+            <mxPoint x="200" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_2" edge="1" parent="1" source="act_browser_1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_1" value="GET /index.php">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="230" as="sourcePoint" />
+            <mxPoint x="380" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_3" edge="1" parent="1" source="act_php_1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_mysql_1" value="SELECT * FROM tours">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="250" as="sourcePoint" />
+            <mxPoint x="540" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_4" edge="1" parent="1" source="act_mysql_1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_1" value="Tour list results">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="300" as="sourcePoint" />
+            <mxPoint x="400" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_5" edge="1" parent="1" source="act_php_1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Display tour cards">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="330" as="sourcePoint" />
+            <mxPoint x="220" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_6" edge="1" parent="1" source="p_customer" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Click &#39;Book Now&#39;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="390" as="sourcePoint" />
+            <mxPoint x="200" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_7" edge="1" parent="1" source="act_browser_1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_2" value="GET /pay.php?tour_id=X">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="410" as="sourcePoint" />
+            <mxPoint x="380" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_8" edge="1" parent="1" source="act_php_2" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_mysql_2" value="Verify user session &amp; tour">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="430" as="sourcePoint" />
+            <mxPoint x="540" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_9" edge="1" parent="1" source="act_php_2" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Show booking form (Step 1)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="470" as="sourcePoint" />
+            <mxPoint x="220" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_10" edge="1" parent="1" source="p_customer" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Fill details &amp; team size">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="530" as="sourcePoint" />
+            <mxPoint x="200" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_11" edge="1" parent="1" source="act_browser_1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_3" value="POST booking details">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="560" as="sourcePoint" />
+            <mxPoint x="380" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_12" edge="1" parent="1" source="act_php_3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=orthogonalEdgeStyle;rounded=0;fontColor=#000000;" target="act_php_3" value="Calculate total_price">
+          <mxGeometry relative="1" x="-0.3333" y="38" as="geometry">
+            <mxPoint x="-3" y="-15" as="offset" />
+            <mxPoint x="400" y="580" as="sourcePoint" />
+            <mxPoint x="450" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_13" edge="1" parent="1" source="act_php_3" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_mysql_3" value="INSERT INTO bookings">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="640" as="sourcePoint" />
+            <mxPoint x="540" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_14" edge="1" parent="1" source="act_mysql_3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_3" value="booking_id returned">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="540" y="680" as="sourcePoint" />
+            <mxPoint x="400" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_15" edge="1" parent="1" source="act_php_3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Show payment page (Step 2)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="710" as="sourcePoint" />
+            <mxPoint x="220" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_16" edge="1" parent="1" source="p_customer" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Submit payment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="770" as="sourcePoint" />
+            <mxPoint x="200" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_17" edge="1" parent="1" source="act_browser_1" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_4" value="POST mock payment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="800" as="sourcePoint" />
+            <mxPoint x="380" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_18" edge="1" parent="1" source="act_php_4" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_payment" value="Process payment()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="830" as="sourcePoint" />
+            <mxPoint x="700" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_19" edge="1" parent="1" source="act_payment" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_4" value="Payment confirmed">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="870" as="sourcePoint" />
+            <mxPoint x="400" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_20" edge="1" parent="1" source="act_php_4" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_qr" value="generateQR(booking_id)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="900" as="sourcePoint" />
+            <mxPoint x="850" y="900" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_21" edge="1" parent="1" source="act_payment" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_4" value="qr_path saved">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="850" y="940" as="sourcePoint" />
+            <mxPoint x="400" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_22" edge="1" parent="1" source="act_php_4" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_pdf" value="generatePDF(booking_id)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="970" as="sourcePoint" />
+            <mxPoint x="1000" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_23" edge="1" parent="1" source="act_pdf" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_php_4" value="pdf_path saved">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1000" y="1010" as="sourcePoint" />
+            <mxPoint x="400" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_24" edge="1" parent="1" source="act_php_4" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" value="INSERT INTO tickets">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="1080" as="sourcePoint" />
+            <mxPoint x="550" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_25" edge="1" parent="1" source="act_php_4" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Show confirmation (Step 3) with QR">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="1120" as="sourcePoint" />
+            <mxPoint x="220" y="1120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg_26" edge="1" parent="1" source="p_customer" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_browser_1" value="Download PDF Ticket">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="1200" as="sourcePoint" />
+            <mxPoint x="200" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="68W-rLPTxEuYxCYzXNOi-2" edge="1" parent="1" source="act_qr" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;rounded=0;fontColor=#000000;" target="act_payment" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="900" as="sourcePoint" />
+            <mxPoint x="390" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="act_payment" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E1F5FE;strokeColor=#039BE5;" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="705" y="730" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

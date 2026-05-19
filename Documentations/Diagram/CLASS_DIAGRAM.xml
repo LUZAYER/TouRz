@@ -1,0 +1,174 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0">
+  <diagram id="tourz_class_diagram" name="TouRz Class Diagram">
+    <mxGraphModel dx="1885" dy="1063" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="user_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="&lt;div&gt;User&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;+ id: int&lt;br&gt;+ name: string&lt;br&gt;+ email: string&lt;br&gt;+ password: string (hashed)&lt;br&gt;+ phone: string&lt;br&gt;+ role: enum(customer/admin)&lt;br&gt;--&lt;br&gt;+ register(): bool&lt;br&gt;+ login(): bool&lt;br&gt;+ logout(): void&lt;br&gt;+ updateProfile(): bool&lt;br&gt;+ getBookingHistory(): array" vertex="1">
+          <mxGeometry height="230" width="220" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="admin_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="Admin&#xa;--&#xa;--&#xa;+ manageTours(): void&#xa;+ manageUsers(): void&#xa;+ viewReports(): void&#xa;+ manageRequests(): void" vertex="1">
+          <mxGeometry height="150" width="220" x="410" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="gen_admin_user" edge="1" parent="1" source="admin_class" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="430" />
+            </Array>
+            <mxPoint x="240" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="customrequest_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="&lt;div&gt;CustomRequest&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;+ id: int&lt;br&gt;+ userId: int&lt;br&gt;+ destination: string&lt;br&gt;+ preferredDates: date&lt;br&gt;+ groupSize: int&lt;br&gt;+ notes: text&lt;br&gt;+ status: enum(pending/approved/rejected)&lt;br&gt;--&lt;br&gt;+ submitRequest(): bool&lt;br&gt;+ updateStatus(): bool" vertex="1">
+          <mxGeometry height="210" width="260" x="140" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_user_customrequest" edge="1" parent="1" source="customrequest_class" style="endArrow=none;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="user_class" value="submits">
+          <mxGeometry relative="1" x="-0.76" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="205" y="430" />
+            </Array>
+            <mxPoint x="150" y="610" as="sourcePoint" />
+            <mxPoint x="150" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_user_cr_mult1" connectable="0" parent="assoc_user_customrequest" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="1" vertex="1">
+          <mxGeometry Moro="0" relative="1" x="-1" y="1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_user_cr_mult2" connectable="0" parent="assoc_user_customrequest" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="10" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="booking_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="&lt;div&gt;Booking&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;+ id: int&lt;br&gt;+ userId: int&lt;br&gt;+ tourId: int&lt;br&gt;+ teamSize: int&lt;br&gt;+ totalPrice: float&lt;br&gt;+ status: enum(pending/confirmed/cancelled)&lt;br&gt;+ bookedAt: datetime&lt;br&gt;--&lt;br&gt;+ createBooking(): bool&lt;br&gt;+ calculateTotal(): float&lt;br&gt;+ cancelBooking(): bool&lt;br&gt;+ getBookingById(): Booking" vertex="1">
+          <mxGeometry height="230" width="270" x="360" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_user_booking" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="booking_class" value="has">
+          <mxGeometry relative="1" x="-0.0476" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="260" y="160" as="sourcePoint" />
+            <mxPoint x="340" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_user_booking_mult1" connectable="0" parent="assoc_user_booking" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_user_booking_mult2" connectable="0" parent="assoc_user_booking" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-30" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tour_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="&lt;div&gt;Tour&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;+ id: int&lt;br&gt;+ name: string&lt;br&gt;+ description: text&lt;br&gt;+ category: enum(Domestic/International)&lt;br&gt;+ pricePerPerson: float&lt;br&gt;+ image: string&lt;br&gt;+ startingPoint: string&lt;br&gt;+ travelDuration: string&lt;br&gt;+ transportation: string&lt;br&gt;+ hotel: string&lt;br&gt;+ nextTourDatetime: datetime&lt;br&gt;--&lt;br&gt;+ getAllTours(): array&lt;br&gt;+ getTourById(id): Tour&lt;br&gt;+ create(): bool&lt;br&gt;+ update(): bool&lt;br&gt;+ delete(): bool" vertex="1">
+          <mxGeometry height="340" width="260" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_tour_booking" edge="1" parent="1" source="tour_class" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="booking_class" value="has">
+          <mxGeometry relative="1" x="-0.0345" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="710" y="210" as="sourcePoint" />
+            <mxPoint x="650" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_tour_booking_mult1" connectable="0" parent="assoc_tour_booking" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="-15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_tour_booking_mult2" connectable="0" parent="assoc_tour_booking" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint y="-27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ticket_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="&lt;div&gt;Ticket&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;+ id: int&lt;br&gt;+ bookingId: int&lt;br&gt;+ qrPath: string&lt;br&gt;+ pdfPath: string&lt;br&gt;+ generatedAt: datetime&lt;br&gt;--&lt;br&gt;+ generateQR(): string&lt;br&gt;+ generatePDF(): string&lt;br&gt;+ downloadTicket(): file" vertex="1">
+          <mxGeometry height="200" width="200" x="760" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_booking_ticket" edge="1" parent="1" source="booking_class" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.652;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.4;entryDx=0;entryDy=0;" target="ticket_class" value="generates">
+          <mxGeometry relative="1" x="-0.0333" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="650" y="510" as="sourcePoint" />
+            <mxPoint x="750" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_booking_ticket_mult1" connectable="0" parent="assoc_booking_ticket" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_booking_ticket_mult2" connectable="0" parent="assoc_booking_ticket" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="1" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-15" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="chatbot_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="&lt;div&gt;Chatbot&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;+ initiateChat()&lt;br&gt;+ processMessage()" vertex="1">
+          <mxGeometry height="110" width="160" x="20" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="chatbotlog_class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="&lt;div&gt;ChatbotLog&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;+ id: int&lt;br&gt;+ userId: int&lt;br&gt;+ queryText: string&lt;br&gt;+ responseText: string&lt;br&gt;+ queriedAt: datetime&lt;br&gt;--&lt;br&gt;+ logQuery(): bool&lt;br&gt;+ getLogs(): array" vertex="1">
+          <mxGeometry height="190" width="200" x="600" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc_chatbot_log" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="records">
+          <mxGeometry relative="1" x="-0.0133" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="80" y="810" />
+            </Array>
+            <mxPoint x="80" y="570" as="sourcePoint" />
+            <mxPoint x="600" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_chatbot_log_mult1" connectable="0" parent="assoc_chatbot_log" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lbl_chatbot_log_mult2" connectable="0" parent="assoc_chatbot_log" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="-30" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWqIV3IaXrtO-X3gXF3W-1" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" value="access">
+          <mxGeometry relative="1" x="-0.49" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="80" y="440" />
+              <mxPoint x="80" y="400" />
+              <mxPoint x="80" y="350" />
+            </Array>
+            <mxPoint x="80" y="460" as="sourcePoint" />
+            <mxPoint x="80" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWqIV3IaXrtO-X3gXF3W-2" connectable="0" parent="aWqIV3IaXrtO-X3gXF3W-1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" value="1" vertex="1">
+          <mxGeometry Moro="0" relative="1" x="-1" y="1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWqIV3IaXrtO-X3gXF3W-3" connectable="0" parent="aWqIV3IaXrtO-X3gXF3W-1" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=top;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="10" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWqIV3IaXrtO-X3gXF3W-6" edge="1" parent="1" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="730" />
+            </Array>
+            <mxPoint x="520" y="580" as="sourcePoint" />
+            <mxPoint x="400" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWqIV3IaXrtO-X3gXF3W-8" connectable="0" parent="aWqIV3IaXrtO-X3gXF3W-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="access" vertex="1">
+          <mxGeometry relative="1" x="0.4211" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aWqIV3IaXrtO-X3gXF3W-11" connectable="0" parent="aWqIV3IaXrtO-X3gXF3W-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.8855" y="1" as="geometry">
+            <mxPoint x="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,46 @@
+.place{
+    display: flex;
+    row-gap: 30px;
+    column-gap: 20px;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 100px;
+}
+.place div{
+    flex: 1 1  calc(33.33% - 40px);  
+}
+.place div img{
+    transition: transform 0.8s;
+}
+.place div p{
+    transition: margin-top 0.8s, font-size 0.8s, color 0.8s;
+    position: relative;
+}
+.place div:hover{
+    img{
+        transform: scale(1.2);
+    }
+    justify-content: center;
+    p{
+        position: relative;
+        font-size: 52px;
+        margin-top: -200px;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+img{
+object-fit:cover;
+    width: 90%;
+}
+p{
+    font-size: 32px;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+a{
+    text-decoration: none;
+}

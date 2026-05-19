@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TouRz - Special Offers</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .offers-container {
+            padding: 50px 10vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .offers-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .offers-header h1 {
+            font-size: 5vw;
+            font-weight: 800;
+            background-image: url(forest.jpeg);
+            background-size: cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+        }
+
+        .offer-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #eee;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff4757;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+
+        .offer-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .offer-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .offer-card:hover .offer-img img {
+            transform: scale(1.1);
+        }
+
+        .offer-content {
+            padding: 25px;
+        }
+
+        .offer-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .offer-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .promo-box {
+            background: #f8f9fa;
+            border: 2px dashed #00b894;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .promo-code {
+            display: block;
+            font-weight: 800;
+            color: #00b894;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        .book-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #1a4a4a;
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background: #2d7d7d;
+            color: white;
+        }
+    </style>
+</head>
+
+<body onload="loadHTML('header.php', 'header'); loadHTML('footer.html', 'footer'); showOverlayWithSpinner();">
+
+    <div class="spinner-box">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="header"></div>
+
+    <main class="offers-container">
+        <div class="offers-header">
+            <h1>Special <span>Offers</span></h1>
+            <p style="color: #666; font-size: 1.2rem;">Unbeatable deals for your next adventure!</p>
+        </div>
+
+        <div class="offers-grid">
+            <!-- Offer 1 -->
+            <div class="offer-card">
+                <div class="offer-badge">10% OFF</div>
+                <div class="offer-img">
+                    <img src="/Images/Bali/b1.jpg" alt="Bali">
+                </div>
+                <div class="offer-content">
+                    <h3>Bali Getaway</h3>
+                    <p>Experience the magical landscapes of Bali with our exclusive tropical deal.</p>
+                    <div class="promo-box">
+                        <p>Use Promo Code:</p>
+                        <span class="promo-code">BALI10</span>
+                    </div>
+                    <a href="bali.html" class="book-btn">View Tour</a>
+                </div>
+            </div>
+
+            <!-- Offer 2 -->
+            <div class="offer-card">
+                <div class="offer-badge">15% OFF</div>
+                <div class="offer-img">
+                    <img src="/Images/Cox_s bazar/c3.jpg" alt="Cox's Bazar" style="background: #1a4a4a;">
+                </div>
+                <div class="offer-content">
+                    <h3>Explore Cox's Bazar</h3>
+                    <p>Walk the world's longest beach with this amazing limited-time discount.</p>
+                    <div class="promo-box">
+                        <p>Use Promo Code:</p>
+                        <span class="promo-code">COX15</span>
+                    </div>
+                    <a href="cox.html" class="book-btn">View Tour</a>
+                </div>
+            </div>
+
+            <!-- Offer 3 -->
+            <div class="offer-card">
+                <div class="offer-badge">SAVE ৳5000</div>
+                <div class="offer-img">
+                    <img src="/Images/Ladakh/l.jpg" alt="Ladakh" style="background: #2d7d7d;">
+                </div>
+                <div class="offer-content">
+                    <h3>Ladakh Escapade</h3>
+                    <p>Conquer the high passes of Ladakh with our biggest savings yet.</p>
+                    <div class="promo-box">
+                        <p>Use Promo Code:</p>
+                        <span class="promo-code">LADAKH26</span>
+                    </div>
+                    <a href="ladakh.html" class="book-btn">View Tour</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
